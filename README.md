@@ -44,6 +44,16 @@ kubectl apply -f frontend-config.yaml
 minikube service frontend --url
 ```
 ***
+# Network policies
+Two network policies are created:
+- allow database to communicate with api
+- allow api to communicate with backend and frontend
+```
+cd deployment
+kubectl apply -f .\netpol-config.yaml
+kubectl get netpol
+```
+***
 # Useful commands
 - check built images: `docker images`
 - remove image: `docker image rm <image_name>`
