@@ -1,10 +1,10 @@
 -- Drop tables if they exist
 DROP TABLE IF EXISTS reservation;
-DROP TABLE IF EXISTS "user";
+DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS vehicle;
 
 -- Create user table
-CREATE TABLE "user"
+CREATE TABLE users
 (
     id       BIGINT      NOT NULL,
     email    VARCHAR(60) NOT NULL,
@@ -38,12 +38,12 @@ CREATE TABLE reservation
     user_id          BIGINT       DEFAULT NULL,
     vehicle_id       BIGINT       DEFAULT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES "user" (id),
+    FOREIGN KEY (user_id) REFERENCES users (id),
     FOREIGN KEY (vehicle_id) REFERENCES vehicle (id)
 );
 
 -- Insert data into user table
-INSERT INTO "user" (id, email, password)
+INSERT INTO users (id, email, password)
 VALUES (1, 'kowalski@kowalski.pl', '$2a$10$CwVExHkDBOkhomt05JBawu7bFTsVY1OIMn/bCe4ccjNx2SL85mw9S'),
        (2, 'nowak@nowak.pl', '$2a$10$ijTybM7zYc1krR.1MXJUU.QRKrv07XbN8WSlPSGj/6OaHWdIzIu3i');
 
