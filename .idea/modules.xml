@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/kubernetes-deployment.iml" filepath="$PROJECT_DIR$/kubernetes-deployment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transport-services-react/transport-services-react.iml" filepath="$PROJECT_DIR$/transport-services-react/transport-services-react.iml" />
     </modules>
   </component>
 </project>
