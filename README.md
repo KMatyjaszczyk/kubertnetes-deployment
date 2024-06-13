@@ -1,3 +1,9 @@
+# Intro
+### Simple fullstack application deployed on Kubernetes
+**Technologies:**
+- Database: **PostgreSQL**
+- Api - backend: **Java with Spring Boot**
+- Frontend: **React**
 # Database
 ## Setup
 ```
